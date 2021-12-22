@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testes</title>
+    <title>Lista de Tarefas (To-do-List)</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon-r.png" type="image/x-icon">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body>
+    <h1>Lista de Tarefas(To-do-List)</h1>
     <div class="container">
-        <input type="text" class="tarefaAdicionada">
+        <input type="text" maxlength="28" class="tarefaAdicionada" placeholder="Digite a tarefa...">
         <button class="adTarefaBtn" onclick="adTarefa()">Adicionar Tarefa</button>
         <div class="container--tarefas">
             <ul>
@@ -18,6 +20,7 @@
             </ul>
         </div>
     </div>
+    <footer>Feito por Rhuan Henrique</footer>
     <script src="script.js"></script>
 </body>
 </html>
