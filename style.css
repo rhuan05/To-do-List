@@ -6,13 +6,19 @@ body{
     background: black;
     font-family: 'segoe ui', arial;
 }
+h1{
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'segoe ui', arial;
+    color: white;
+}
 .container{
     background: white;
     text-align: center;
-    width: 60%;
+    width: 400px;
     display: block;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 50px;
     padding: 20px;
     border-radius: 10px;
 }
@@ -26,9 +32,10 @@ body{
     background: black;
     color: white;
     border: none;
-    padding: 8px;
-    border-radius: 3px;
+    padding: 7px 10px;
+    border-radius: 5px;
     font-weight: 600;
+    font-size: 16px;
     cursor: pointer;
 }
 .container ul{
@@ -41,7 +48,10 @@ body{
     display: flex;
     font-size: 20px;
     margin: 15px;
-    justify-content: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 3px;
+    border-radius: 5px
 }
 .container li button{
     margin-left: 20px;
@@ -53,8 +63,9 @@ body{
     width: 30px;
     height: 30px;
     cursor: pointer;
-    background-image: url('https://cdn-icons-png.flaticon.com/512/3096/3096750.png');
+    background-image: url('https://cdn-icons-png.flaticon.com/512/3159/3159662.png');
     background-size: cover;
+    background-color: white;
 }
 @media(max-width: 600px){
     .container input{
@@ -63,4 +74,12 @@ body{
         width: 150px;
         margin-bottom: 10px;
     }
+}
+footer{
+    font-family: 'segoe ui', arial;
+    font-style: italic;
+    position: absolute;
+    bottom: 20px;
+    left: 43vw;
+    color: white;
 }
