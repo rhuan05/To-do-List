@@ -67,6 +67,15 @@ h1{
     background-size: cover;
     background-color: white;
 }
+footer{
+    font-family: 'segoe ui', arial;
+    font-style: italic;
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
 @media(max-width: 600px){
     .container input{
         padding: 5px;
@@ -75,11 +84,37 @@ h1{
         margin-bottom: 10px;
     }
 }
-footer{
-    font-family: 'segoe ui', arial;
-    font-style: italic;
-    position: absolute;
-    bottom: 20px;
-    left: 43vw;
-    color: white;
+@media(max-width: 500px){
+    h1{
+        font-size: 23px;
+    }
+    .container{
+        width: 250px;
+    }
+    .container input{
+        font-size: 10px;
+        padding: 5px 2px;
+    }
+    .container .adTarefaBtn{
+        font-size: 10px;
+        padding: 7px 5px;
+    }
+    .container li{
+        font-size: 12px;
+        padding: 3px;
+    }
+    .container li button{
+        margin-left: 20px;
+        color: white;
+        border: none;
+        padding: 10px;
+        font-size: 12px;
+        border-radius: 2px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        background-image: url('https://cdn-icons-png.flaticon.com/512/3159/3159662.png');
+        background-size: cover;
+        background-color: white;
+    }
 }
