@@ -1,3 +1,7 @@
+if(localStorage.lista){
+    document.querySelector('ul').innerHTML = localStorage.lista;
+};
+
 var tarefaAdicionada = document.querySelector('.tarefaAdicionada');
 var ul = document.querySelector('ul');
 
@@ -5,7 +9,7 @@ var ul = document.querySelector('ul');
 
 function adTarefa(){
     if(tarefaAdicionada.value.length === 0){
-        alert('ERRO');
+        alert('Digite alguma tarefa no campo vazio.');
     } else {
         var li = document.createElement('li');
         var button = document.createElement('button');
@@ -13,8 +17,8 @@ function adTarefa(){
         button.classList.add('apagar');
         ul.appendChild(li);
         li.appendChild(button);
+        localStorage.setItem('lista', ul.innerHTML);
     }
-    salvarTarefas();
 }
 
 // Apagar Tarefa
@@ -23,21 +27,6 @@ document.addEventListener('click', (e)=>{
     var el = e.target;
     if(el.classList == 'apagar'){
         el.parentElement.remove();
+        localStorage.setItem('lista', ul.innerHTML);
     }
-    salvarTarefas();
 });
-
-// Salvar Tarefas
-
-function salvarTarefas(){
-    const liTarefas = ul.querySelectorAll('li');
-    const listaDeTarefas = [];
-
-    for (let ul of liTarefas){
-        let tarefaTexto = ul.innerText;
-        listaDeTarefas.push(tarefaTexto);
-    }
-
-    const tarefasJSON = JSON.stringify(listaDeTarefas);
-    localStorage.setItem('tarefas', tarefasJSON);
-};
