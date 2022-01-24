@@ -1,120 +1,109 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body{
-    background: black;
-    font-family: 'segoe ui', arial;
-}
-h1{
-    margin-top: 50px;
-    text-align: center;
-    font-family: 'segoe ui', arial;
-    color: white;
+    background: linear-gradient(to right, rgb(40, 40, 40), rgb(70, 70, 70));
 }
 .container{
     background: white;
-    text-align: center;
-    width: 400px;
-    display: block;
-    margin: auto;
-    margin-top: 50px;
-    padding: 20px;
+    padding: 20px 0px;
     border-radius: 10px;
-}
-.container input{
-    padding: 5px;
-    font-size: 18px;
-    border-radius: 5px;
-    border: 1px solid black;
-}
-.container .adTarefaBtn{
-    background: black;
-    color: white;
-    border: none;
-    padding: 7px 10px;
-    border-radius: 5px;
-    font-weight: 600;
-    font-size: 16px;
-    cursor: pointer;
-}
-.container ul{
-    list-style: none;
-    margin-top: 20px;
-    display: block;
+    width: 700px;
     margin: auto;
+    text-align: center;
+    margin-top: 100px;
 }
-.container li{
-    display: flex;
+.container--topo input{
+    height: 35px;
+    padding: 0px 10px;
     font-size: 20px;
-    margin: 15px;
-    justify-content: space-between;
-    border: 1px solid black;
-    padding: 3px;
-    border-radius: 5px
+    border-radius: 5px;
+    width: 500px;
+    border: 3px solid rgb(206, 206, 206);
+    outline: none;
 }
-.container li button{
-    margin-left: 20px;
+.container--topo button{
+    font-size: 18px;
+    height: 42px;
+    padding: 0px 20px;
+    margin-left: -70px;
+    background: rgb(40, 40, 40);
     color: white;
     border: none;
-    padding: 10px;
-    font-size: 18px;
-    border-radius: 2px;
-    width: 30px;
-    height: 30px;
+    font-weight: 600;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; 
     cursor: pointer;
-    background-image: url('https://cdn-icons-png.flaticon.com/512/3159/3159662.png');
-    background-size: cover;
-    background-color: white;
+}
+.container--tarefas{
+    text-align: center;
+}
+.container--tarefas ul{
+    list-style: none;
+    font-size: 20px;
+}
+.container--tarefas li{
+    padding: 10px 0px;
+}
+ul li i{
+    color: rgb(40, 40, 40);
+    cursor: pointer;
+    padding: 20px;
 }
 footer{
-    font-family: 'segoe ui', arial;
-    font-style: italic;
-    color: white;
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
     text-align: center;
+    margin-top: 10px;
+    color: white;
+    font-size: 18px;
+    font-style: italic;
 }
-@media(max-width: 600px){
-    .container input{
-        padding: 5px;
-        font-size: 18px;
-        width: 150px;
-        margin-bottom: 10px;
+@media(max-width: 425px){
+    .container--topo input{
+        width: 200px;
+        font-size: 16px;
+    }
+    .container--topo button{
+        font-size: 14px;
+    }
+    .container{
+        width: 350px;
+    }
+    footer{
+        font-size: 14px;
+    }
+    .container--tarefas ul{
+        font-size: 16px;
+    }
+    ul li i{
+        padding: 10px;
     }
 }
-@media(max-width: 500px){
-    h1{
-        font-size: 23px;
+@media(max-width: 320px){
+    .container--topo input{
+        width: 150px;
+        font-size: 12px;
+        padding: 0px 5px;
+        border: 2px solid rgb(206, 206, 206);
+    }
+    .container--topo button{
+        font-size: 10px;
+        height: 40px;
+        padding: 0px 10px;
     }
     .container{
         width: 250px;
     }
-    .container input{
-        font-size: 10px;
-        padding: 5px 2px;
-    }
-    .container .adTarefaBtn{
-        font-size: 10px;
-        padding: 7px 5px;
-    }
-    .container li{
+    footer{
         font-size: 12px;
-        padding: 3px;
     }
-    .container li button{
-        margin-left: 20px;
-        color: white;
-        border: none;
-        padding: 10px;
-        font-size: 12px;
-        border-radius: 2px;
-        width: 20px;
-        height: 20px;
-        cursor: pointer;
-        background-image: url('https://cdn-icons-png.flaticon.com/512/3159/3159662.png');
-        background-size: cover;
-        background-color: white;
+    .container--tarefas ul{
+        font-size: 14px;
+    }
+    ul li i{
+        padding: 5px;
     }
 }
