@@ -2,31 +2,20 @@ if(localStorage.lista){
     document.querySelector('ul').innerHTML = localStorage.lista;
 };
 
-var tarefaAdicionada = document.querySelector('.tarefaAdicionada');
-var ul = document.querySelector('ul');
+const btnAdicionar = document.getElementById('btnAdicionar');
+const inputTafera = document.getElementById('inputTafera');
+let ul = document.querySelector('ul');
 
-//Criar Tarefa
-
-function adTarefa(){
-    if(tarefaAdicionada.value.length === 0){
-        alert('Digite alguma tarefa no campo vazio.');
+btnAdicionar.addEventListener('click', () => {
+    if(inputTafera.value.length === 0){
+        alert('Preencha o campo de tarefas.');
     } else {
-        var li = document.createElement('li');
-        var button = document.createElement('button');
-        li.innerText = tarefaAdicionada.value;
-        button.classList.add('apagar');
-        ul.appendChild(li);
-        li.appendChild(button);
-        localStorage.setItem('lista', ul.innerHTML);
-    }
-}
-
-// Apagar Tarefa
-
-document.addEventListener('click', (e)=>{
-    var el = e.target;
-    if(el.classList == 'apagar'){
-        el.parentElement.remove();
+        ul.innerHTML += `<li>${inputTafera.value}<i class="fas fa-trash" onclick="remover(this)"></i></li>`;
         localStorage.setItem('lista', ul.innerHTML);
     }
 });
+
+function remover(e){
+    e.parentElement.remove();
+    localStorage.setItem('lista', ul.innerHTML);
+};
